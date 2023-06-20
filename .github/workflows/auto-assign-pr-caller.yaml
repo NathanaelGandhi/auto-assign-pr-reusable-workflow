@@ -4,6 +4,7 @@ name: 'Auto Assign PRs Caller'
 on:
   pull_request:
     types: [opened, ready_for_review]
+  workflow_dispatch:
 
 permissions:
   contents: read
