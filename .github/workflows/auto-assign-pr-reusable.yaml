@@ -1,0 +1,22 @@
+# Nathanael Gandhi | github.com/NathanaelGandhi
+
+name: 'Auto Assign PRs Reusable'
+
+on:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      caller_token:
+        required: true
+
+jobs:
+  auto-assign-pr:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: kentaro-m/auto-assign-action@v1.2.5
+      with:
+        repo-token: ${{ secrets.caller_token }}
+        configuration-path: ${{ inputs.config-path }}
