@@ -16,7 +16,7 @@ jobs:
   auto-assign-pr:
     runs-on: ubuntu-latest
     steps:
-    - uses: kentaro-m/auto-assign-action@v1.2.6
+    - uses: kentaro-m/auto-assign-action@v2.0.0
       with:
         repo-token: ${{ secrets.caller_token }}
         configuration-path: ${{ inputs.config-path }}
